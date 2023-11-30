@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right top, #64cade, #6fc9da, #7ac9d5, #83c8d2, #8cc7ce);
+    font-size: 1.8rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box .inputbox {
+    background-color: white;
+    position: relative;
+    width: 40%;
+    height: 75px;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.inputbox input {
+    width: 85%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 23px;
+
+
+}
+
+.box .inputbox #toggle-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: rgba(108, 103, 103, 0.186);
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .inputbox #toggle-btn::before {
+    content: "\f06e";
+    font-family: fontAwesome;
+}
+
+.box .inputbox #toggle-btn.hide::before {
+    content: "\f070";
+    font-family: fontAwesome;
+}
+
+.validation {
+    background: rgb(65, 120, 208);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.validation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.validation ul li {
+    position: relative;
+    list-style: none;
+    color: white;
+}
+
+.validation ul li.valid {
+    color: rgb(202, 199, 199);
+}
+
+.validation ul li.valid::before {
+    content: "\f00c";
+    font-family: fontAwesome;
+    color: rgb(99, 238, 99);
+}
+
+.validation ul li::before {
+    content: "\f192";
+    width: 12px;
+    height: 12px;
+    font-family: fontAwesome;
+    display: inline-block;
+    padding-right: 28px;
+
+}
